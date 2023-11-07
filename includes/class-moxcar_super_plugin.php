@@ -122,7 +122,10 @@ class Moxcar_super_plugin {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-moxcar_super_plugin-public.php';
 
+		require_once  MOXCAR_SUPER_PLUGIN_PATH . "apps/apps-loader.php";
+
 		$this->loader = new Moxcar_super_plugin_Loader();
+		$this->apps_loader = new AppsLoader();
 
 	}
 
@@ -182,6 +185,8 @@ class Moxcar_super_plugin {
 	 */
 	public function run() {
 		$this->loader->run();
+
+		$this->apps_loader->run();
 	}
 
 	/**

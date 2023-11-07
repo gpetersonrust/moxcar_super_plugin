@@ -25,6 +25,10 @@
  * Domain Path:       /languages
  */
 
+  define( 'MOXCAR_SUPER_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+  define( 'MOXCAR_SUPER_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
